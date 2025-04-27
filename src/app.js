@@ -1,6 +1,8 @@
-import * as React from 'react'
-import '../public/globals.css'
-import { FlexCol } from './utils'
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Card, Button } from 'react-bootstrap';
+import '../public/globals.css';
+import { FlexCol } from './utils';
 
 export var App = () => {
   return (
@@ -14,14 +16,16 @@ export var App = () => {
         alignItems: 'center',
       }}
     >
-      <img
-        src='https://github.com/concrete-utopia/utopia/blob/master/editor/resources/editor/pyramid_fullsize@2x.png?raw=true'
-        alt='Utopia logo'
-        style={{
-          width: 357,
-          height: 453,
-        }}
-      ></img>
+      <Card style={{ width: '18rem', marginTop: '20px' }}>
+        <Card.Img variant="top" src="https://via.placeholder.com/150" />
+        <Card.Body>
+          <Card.Title>John Doe</Card.Title>
+          <Card.Text>
+            Software engineer passionate about Utopia and Bootstrap.
+          </Card.Text>
+          <Button variant="primary">Visit Profile</Button>
+        </Card.Body>
+      </Card>
     </FlexCol>
   )
 }
